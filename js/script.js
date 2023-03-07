@@ -1,6 +1,8 @@
 //creo le variabili corrispondenti agli elementi html
-//creare variabile per visualizzare 5 numeri casuali nel dom
-//alla pressione del tasto verranno generati i numeri
+//creo l'array del gruppo di numeri
+//faccio spuntare l'array in pagina
+//creo la funzione che fa sì che vengano generati i numeri
+//dopo i numeri creo la funzione che genera il timer
 //assieme ai numeri genero un conto fino a 10 secondi alla fine del quale i numeri riportati spariranno
 //creo un prompt che chiede all'utente quali delle 5 cifre si ricorda
 //-->SE l'utente indovina anche solo una cifra gli riporto quale di esse sia
@@ -8,5 +10,20 @@
 
 
 //creo le variabili corrispondenti agli elementi html
-const numGen = document.getElementById('generatore');
+const numGenEl = document.getElementById('generatore');
 const numContEl = document.getElementById("numeri");
+
+//creo la variabile dell'array di numeri
+let randomNumbers = Array.from({length: 5}, () => Math.floor(Math.random() * 100) + 1);;
+
+//in pagina spunteranno i numeri
+numContEl.innerHTML = `<b>${randomNumbers}</b>`;
+//console.log(randomNumbers);
+
+//dopo i numeri creo la funzione che genera il timer
+setTimeout (svanire, 10000);
+function svanire() {
+    numContEl.style.display = "none";
+    let userNumbers = [prompt('quali erano i numeri?')];
+    //console.log(userNumbers);
+}
