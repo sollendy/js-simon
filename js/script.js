@@ -14,15 +14,15 @@ const numGenEl = document.getElementById('generatore');
 const numContEl = document.getElementById("numeri");
 
 //creo la variabile dell'array di numeri
-let randomNumbers = Array.from({length: 5}, () => Math.floor(Math.random() * 10) + 1);;
+let randomNumbers = Array.from({length: 5}, () => Math.floor(Math.random() * 100) + 1);;
 
 //in pagina spunteranno i numeri
 numContEl.innerHTML = `<b>${randomNumbers}</b>`;
 //console.log(randomNumbers);
 
 //dopo i numeri creo la funzione che genera i timer
-setTimeout (svanire, 3000);
-setTimeout (risposta, 3010);
+setTimeout (svanire, 10000);
+setTimeout (risposta, 10500);
 
 function svanire() {
     numContEl.style.display = "none";
@@ -31,6 +31,12 @@ function svanire() {
 }
 
 function risposta() {
-    let userNumbers = [prompt('quali erano i numeri?')];
+    let userNumbers = [];
+    for (let i = 0; i <= 4; i++) {
+        userNumbers.push(prompt('quali erano i numeri?'));
+    }
+    //console.log(userNumbers);
+    if (randomNumbers.includes(userNumbers[i])) {
+        numContEl.innerHTML = `hai indovinato tot numeri`;
+    }
 }
-
