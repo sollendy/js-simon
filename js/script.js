@@ -35,8 +35,11 @@ function risposta() {
     for (let i = 0; i <= 4; i++) {
         userNumbers.push(prompt('quali erano i numeri?'));
     }
-    //console.log(userNumbers);
-    if (randomNumbers.includes(userNumbers[i])) {
-        numContEl.innerHTML = `hai indovinato tot numeri`;
+}
+
+function verifica (userNumbers, randomNumbers) {
+    let numeriGiusti = [];
+    if () {
+
     }
 }
