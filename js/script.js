@@ -14,6 +14,7 @@ const numGenEl = document.getElementById('generatore');
 const numContEl = document.getElementById("numeri");
 
 //creo la variabile dell'array di numeri
+// let contatore = 0;
 let randomNumbers = Array.from({length: 5}, () => Math.floor(Math.random() * 100) + 1);;
 
 //in pagina spunteranno i numeri
@@ -22,24 +23,32 @@ numContEl.innerHTML = `<b>${randomNumbers}</b>`;
 
 //dopo i numeri creo la funzione che genera i timer
 setTimeout (svanire, 10000);
-setTimeout (risposta, 10500);
+setTimeout (domanda, 10500);
+setTimeout (verifica, 11000);
 
 function svanire() {
-    numContEl.style.display = "none";
+    numContEl.innerHTML = `è il tuo turno!`;
     //let userNumbers = [prompt('quali erano i numeri?')];
-    //console.log(userNumbers);
+    //conso1le.log(userNumbers);
 }
 
-function risposta() {
+function domanda() {
     let userNumbers = [];
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i < randomNumbers.length; i++) {
         userNumbers.push(prompt('quali erano i numeri?'));
     }
 }
 
-function verifica (userNumbers, randomNumbers) {
-    let numeriGiusti = [];
-    if () {
+   function verifica (userNumbers, randomNumbers) {
 
-    }
-}
+     let numeriGiusti = [];
+     for (let i = 0; i < 6; i++) {
+         if (randomNumbers[i] == userNumbers[i]) {
+            numeriGiusti.push(randomNumbers[i]);
+            console.log(numeriGiusti);
+            //numContEl.append(``);
+         }
+
+     }
+
+   }
