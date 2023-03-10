@@ -42,7 +42,7 @@ function domanda() {
 function verifica () {
 
     let numeriGiusti = [];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < randomNumbers.length; i++) {
         if (randomNumbers[i] == userNumbers[i]) {
             numeriGiusti.push(randomNumbers[i]);
             console.log(numeriGiusti);
