@@ -39,16 +39,16 @@ function domanda() {
     }
 }
 
-   function verifica (userNumbers, randomNumbers) {
+function verifica (userNumbers, randomNumbers) {
 
-     let numeriGiusti = [];
-     for (let i = 0; i < 6; i++) {
-         if (randomNumbers[i] == userNumbers[i]) {
+    let numeriGiusti = [];
+    for (let i = 0; i < 6; i++) {
+        if (randomNumbers[i] == userNumbers[i]) {
             numeriGiusti.push(randomNumbers[i]);
             console.log(numeriGiusti);
             //numContEl.append(``);
-         }
+        }
 
-     }
+    }
 
-   }
+}
