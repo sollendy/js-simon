@@ -22,9 +22,8 @@ numContEl.innerHTML = `<b>${randomNumbers}</b>`;
 //console.log(randomNumbers);
 
 //dopo i numeri creo la funzione che genera i timer
-setTimeout (svanire, 10000);
-setTimeout (domanda, 10500);
-setTimeout (verifica(userNumbers), 11000);
+setTimeout (svanire, 4000);
+setTimeout (domanda, 4500);
 
 function svanire() {
     numContEl.innerHTML = `è il tuo turno!`;
@@ -38,6 +37,7 @@ function domanda() {
         userNumbers.push(prompt('quali erano i numeri?'));
     }
     console.log(userNumbers);
+    verifica();
 }
 
 function verifica () {
@@ -50,5 +50,6 @@ function verifica () {
         }
     }
     console.log(numeriGiusti);
+    numContEl.innerHTML = `Numeri dati: <b>${randomNumbers}</b><br>numeri indovinati: <b>${numeriGiusti.length}</b><br> i numeri sono: <b>${numeriGiusti}</b>`;
 }
 
