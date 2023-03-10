@@ -34,22 +34,21 @@ function svanire() {
 
 function domanda() {
     
-    for (let i = 0; i < randomNumbers.length; i++) {
+    for (let i = 0; i <= 4; i++) {
         userNumbers.push(prompt('quali erano i numeri?'));
     }
+    console.log(userNumbers);
 }
 
 function verifica () {
 
     let numeriGiusti = [];
-    for (let i = 0; i < randomNumbers.length; i++) {
+    for (let i = 0; i <= 4; i++) {
         if (randomNumbers[i] == userNumbers[i]) {
             numeriGiusti.push(randomNumbers[i]);
-            console.log(numeriGiusti);
             //numContEl.append(``);
         }
-
     }
-
+    console.log(numeriGiusti);
 }
 
