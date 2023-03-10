@@ -14,7 +14,7 @@ const numGenEl = document.getElementById('generatore');
 const numContEl = document.getElementById("numeri");
 //creo la variabile dell'array di numeri
 // let contatore = 0;
-let randomNumbers = Array.from({length: 5}, () => Math.floor(Math.random() * 100) + 1);;
+let randomNumbers = Array.from({length: 5}, () => Math.floor(Math.random() * 20) + 1);;
 let userNumbers = [];
 
 //in pagina spunteranno i numeri
@@ -39,7 +39,7 @@ function domanda() {
     }
 }
 
-function verifica (userNumbers, randomNumbers) {
+function verifica () {
 
     let numeriGiusti = [];
     for (let i = 0; i < 6; i++) {
